@@ -1,0 +1,65 @@
+<p class="titulo">FORMATO DE CRONOGRAMA</p>
+<div id="pdf" class="container">
+  <label>Fecha de inicio del proyecto </label>
+  <input type="date" (change)="SendDataonChange($event)">
+  <div style="margin-top:2% ;" class="container">
+    <form (ngSubmit)="EnviarDatos()">
+      <div class="row">
+        <div class="col-3">
+          <input name="actividad" [(ngModel)]="actidad.actividad" type="text" class="form-control" placeholder="Actividad">
+        </div>
+        <div class="col-2">
+          <input name="Fecha_inicio" [(ngModel)]="actidad.ini" type="date" class="form-control" placeholder="fecha inicio">
+          <label>Fecha inicio actividad </label>
+        </div>
+        <div class="col-2">
+          <input name="Fecha_final_plan" [(ngModel)]="actidad.FP" type="date" class="form-control" placeholder="Descripcion">
+          <label>Fecha final plan actividad </label>
+        </div>
+        <div class="col-2">
+          <input name="Fecha_final_Real" [(ngModel)]="actidad.FR" type="date" class="form-control" placeholder="Cantidad">
+          <label>Fecha final real actividad </label>
+        </div>
+        <div class="col-2">
+          <button type="submit" style="position: absolute; top: 28.4%;" class="btn btn-success">Agregar</button>
+        </div>
+      </div>
+    </form>
+</div>
+    <table id="season-tble" style="margin-top:2% ;" class="table">
+      <thead>
+        <th>ACTIVIDAD</th>
+        <th>INICIO</th>
+        <th>FIN PLAN</th>
+        <th>FIN REAL</th>
+        <th>DIAS</th>
+        <th>% AVANCE PLAN</th>
+        <th>% AVANCE REAL</th>
+        <th>DIAS DE RETRASO</th>
+        <th>% DE RETRASO</th>
+        <th>ESTADO</th>
+
+      </thead>
+      <tbody>
+        <tr *ngFor="let actidad of actividades">
+          <td>{{actidad.actividad}}</td>
+          <td>{{actidad.ini}}</td>
+          <td>{{actidad.FP}}</td>
+          <td>{{actidad.FR}}</td>
+          <td>{{actidad.dias}}</td>
+          <td>{{actidad.PAvanceP}}%</td>
+          <td>{{actidad.PAvanceR}}%</td>
+          <td>{{actidad.diasR}}</td>
+          <td>{{actidad.PdiasR}}%</td>
+          <td>{{actidad.estado}}</td>
+        </tr>
+      </tbody>
+
+    </table>
+    <h5>% AVANCE PLAN GLOBAL: {{PGP}}</h5>
+  <h5>% AVANCE REAL GLOBAL: {{PGR}}</h5>
+
+</div>
+<button (click)="CrearPDF()" style="position: absolute; left:40%;"  class="btn btn-success">Generar PDF</button>
+<button (click)="exportToExcel()" style="position: absolute; left:50%;"  class="btn btn-success">Generar Excel</button>
+

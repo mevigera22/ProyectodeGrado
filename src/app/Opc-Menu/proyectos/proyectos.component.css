@@ -1,0 +1,14 @@
+.titulo{
+  padding-top: 6%;
+  font-size: 190%;
+  text-align: center;
+  color: #15f81c;
+  background: #FFFFFF;
+  text-shadow: #e0e0e0 1px 1px 0;
+}
+.imagen{
+  width: 800px;
+    display: block;
+    margin: 0px auto;
+}
+hr {border: 3px solid #666; border-radius: 300px/10px; height: 0px; text-align: center;}

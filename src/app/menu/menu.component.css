@@ -1,0 +1,20 @@
+.nav-link{
+  font-family: "Metropolis Thin";
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  font-size: 75%;
+  padding-left: 3%;
+  margin-top: 3.2%;
+  font-weight: 700;
+  }
+  .nav-link:hover{
+    -webkit-text-stroke: 1px rgb(241, 241, 241);
+
+  }
+.logo{
+  width: 30%;
+  margin-right: 20%;
+}
+a{
+  font-size: 120%;
+}

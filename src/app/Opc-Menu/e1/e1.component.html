@@ -1,0 +1,269 @@
+<p class="titulo">MANO DE OBRA</p>
+<div class="container">
+    <form (ngSubmit)="EnviarDatos()">
+      <div class="row">
+        <div class="col-1">
+          <input name="item" [(ngModel)]="cotiza.item" type="text" class="form-control" placeholder="Item">
+        </div>
+        <div class="col-2">
+          <select name="tipo" [(ngModel)]="cotiza.tipo" placeholder="Tipo" class="form-control">
+            <option>PRELIMINARES</option>
+            <option>EXCAVACIONES Y CIMENTACIONES</option>
+            <option>RELLENOS</option>
+            <option>ESTRUCTURA</option>
+            <option>MAMPOSTERIA</option>
+            <option>PAÑETE</option>
+            <option>ENCHAPE</option>
+            <option>CUBIERTAS Y CIELORRASO</option>
+            <option>REDES HIDROSANITARIAS</option>
+            <option>REDES ELÉCTRICAS</option>
+            <option>PISO</option>
+            <option>CARPINTERÍA EN MADERA</option>
+            <option>CARPINTERÍA METÁLICA</option>
+            <option>IMPERMEABILIZACIONES</option>
+            <option>ACABADOS</option>
+
+          </select>
+        </div>
+        <div class="col-3">
+          <select name="actividad" [(ngModel)]="cotiza.actividad" placeholder="Actividad" class="form-control ">
+            <option>ACERO DE REFUERZO</option>
+            <option>ALFAJÍA EN CONCRETO</option>
+            <option>ASEO GENERAL</option>
+            <option>CAMPAMENTO</option>
+            <option>CARGUE Y RETIRO DE MATERIAL</option>
+            <option>CENEFAS</option>
+            <option>CIELORRASO ACRÍLICO</option>
+            <option>CIELORRASO ALUMINIO</option>
+            <option>CIELORRASO DRYWALL</option>
+            <option>CIELORRASO DRYWALL ANTIHUMEDAD</option>
+            <option>CIELORRASO EN LÁMINA POLICARBONATO</option>
+            <option>CIELORRASO EN TABLILLAS PVC</option>
+            <option>CIELORRASO FIBRA DE VIDRIO</option>
+            <option>CIELORRASO ICOPOR</option>
+            <option>CIELORRASO MADERA</option>
+            <option>CIMIENTO DE CONCRETO 2500 PSI</option>
+            <option>CIMIENTO DE CONCRETO 3000 PSI</option>
+            <option>COLUMNA CIRCULAR EN CONCRETO 3000 PSI</option>
+            <option>COLUMNA CIRCULAR EN CONCRETO 3500 PSI</option>
+            <option>COLUMNAS EN CONCRETO 3000 PSI</option>
+            <option>COLUMNAS EN CONCRETO 3500 PSI</option>
+            <option>COLUMNETAS GRANDES EN CONCRETO 3000 PSI</option>
+            <option>COLUMNETAS GRANDES EN CONCRETO 3500 PSI</option>
+            <option>COLUMNETAS PEQUEÑAS EN CONCRETO 3000 PSI</option>
+            <option>COLUMNETAS PEQUEÑAS EN CONCRETO 3500 PSI</option>
+            <option>CONCRETO PLACA FONDO TANQUES 3000 PSI</option>
+            <option>CONCRETO PLACA TAPA TANQUES</option>
+            <option>CORTES EN ROCA</option>
+            <option>CUBIERTA LAMINA ONDULADA/MADERA</option>
+            <option>CUBIERTA TEJA ESPAÑOLA/MADERA</option>
+            <option>CUBIERTA TIPO SANDWICH METECNO</option>
+            <option>CUCHILLAS</option>
+            <option>DEMOLICIÓN ENCHAPE</option>
+            <option>DEMOLICIÓN LOSA SOBRE TERRENO</option>
+            <option>DEMOLICIÓN MANUAL DE CONCRETO</option>
+            <option>DEMOLICIÓN MUROS</option>
+            <option>DEMOLICIÓN PLACA PISO</option>
+            <option>DEMOLICIÓN PLACAS MACIZAS</option>
+            <option>DEMOLICIÓN VIGAS Y COLUMNAS</option>
+            <option>DERRIBO MURO</option>
+            <option>DESCAPOTE Y LIMPIEZA</option>
+            <option>DESCAPOTE Y NIVELACIÓN</option>
+            <option>DESMONTE APARATOS SANITARIOS</option>
+            <option>DESMONTE CIELO FALSO</option>
+            <option>DESMONTE CUBIERTAS</option>
+            <option>DESMONTE PUERTAS METÁLICAS O DE MADERA</option>
+            <option>DESMONTE TECHO Y ESTRUCTURA DE MADERA</option>
+            <option>DESMONTE VENTANAS METÁLICAS O DE MADERA</option>
+            <option>DINTEL BLOQUE ARCILLA 12</option>
+            <option>DINTEL BLOQUE ARCILLA 15</option>
+            <option>DINTEL BLOQUE ARCILLA 9</option>
+            <option>DINTEL EN CONCRETO</option>
+            <option>ENCHAPE AZULEJO</option>
+            <option>ENCHAPE CERÁMICA</option>
+            <option>ENCHAPE EN PIEDRA LAJA</option>
+            <option>ENCHAPE PORCELANA</option>
+            <option>ESCALERA EN CONCRETO 3000 PSI</option>
+            <option>ESCALERA EN CONCRETO 3500 PSI</option>
+            <option>ESTRUCTURA METÁLICA PARA TECHO</option>
+            <option>ESTUCADO Y VINILO SOBRE MURO</option>
+            <option>ESTUCADO YESO SOBRE LOSA</option>
+            <option>ESTUCADO YESO SOBRE MURO</option>
+            <option>EXCAVACIÓN CIMIENTOS</option>
+            <option>EXCAVACIÓN DE ZAPATAS</option>
+            <option>EXCAVACIÓN MANUAL</option>
+            <option>EXCAVACIÓN MECÁNICA</option>
+            <option>EXCAVACIÓN PARA REDES</option>
+            <option>EXCAVACIÓN TANQUES Y FOSOS</option>
+            <option>EXCAVACIÓN VIGAS DE CIMENTACIÓN</option>
+            <option>GORROS DE COLUMNAS</option>
+            <option>GRANIPLAST APLICADO</option>
+            <option>IMPERMEABILIZACIÓN CALIENTE 2 CAPAS</option>
+            <option>IMPERMEABILIZACIÓN CALIENTE 3 CAPAS</option>
+            <option>IMPERMEABILIZACIÓN CON ECOPLUG 5000</option>
+            <option>IMPERMEABILIZACIÓN MANTO</option>
+            <option>INSTALACIÓN ACCESORIOS PARA BAÑO</option>
+            <option>INSTALACIÓN APARATOS SANITARIOS</option>
+            <option>INSTALACIÓN CERRADURA ACCESO</option>
+            <option>INSTALACIÓN CERRADURAS DE ALCOBA</option>
+            <option>INSTALACIÓN CERRADURAS DE BAÑO</option>
+            <option>INSTALACIÓN CLOSETS</option>
+            <option>INSTALACIÓN DIVISIONES DE BAÑO</option>
+            <option>INSTALACIÓN PÉRGOLAS</option>
+            <option>INSTALACIÓN PROVICIONAL DE AGUA</option>
+            <option>INSTALACIÓN PROVICIONAL DE ENERGIA</option>
+            <option>INSTALACIÓN PUERTA DIVISORIA BAÑO</option>
+            <option>INSTALACIÓN PUERTAS</option>
+            <option>INSTALACIÓN PUERTAS VENTANAS</option>
+            <option>INSTALACIÓN RED ELÉCTRICA</option>
+            <option>INSTALACIÓN VENTANAS</option>
+            <option>JUNTAS INTERIORES</option>
+            <option>LEVANTE BLOQUE ARCILLA 12</option>
+            <option>LEVANTE BLOQUE ARCILLA 15</option>
+            <option>LEVANTE BLOQUE ARCILLA 20</option>
+            <option>LEVANTE BLOQUE ARCILLA 9</option>
+            <option>LEVANTE BLOQUE DE CEMENTO</option>
+            <option>LEVANTE CALADO</option>
+            <option>LEVANTE DOBLE LADRILLO</option>
+            <option>LEVANTE DOBLE LADRILLO TOLETTE</option>
+            <option>LEVANTE SENCILLO LADRILLO</option>
+            <option>LEVANTE SENCILLO LADRILLO TOLETTE</option>
+            <option>LIMPIEZA Y NIVELACIÓN</option>
+            <option>LOCALIZACIÓN Y REPLANTEO</option>
+            <option>LOSA ALIGERADA</option>
+            <option>LOSA METALDECK 2"</option>
+            <option>LOSA METALDECK 3"</option>
+            <option>MESÓN DE GRANITO PARA COCINA</option>
+            <option>MESÓN DE MÁRMOL PARA BAÑOS</option>
+            <option>MESÓN EN CONCRETO</option>
+            <option>MOLDURA EN YESO</option>
+            <option>MUEBLE DE COCINA EN MELAMINA</option>
+            <option>MURO DE CONTENCIÓN 3000 PSI</option>
+            <option>MURO DE CONTENCIÓN 3500 PSI</option>
+            <option>MURO DE CONTENCIÓN BLOQUE</option>
+            <option>MURO EN CONCRETO</option>
+            <option>PAÑETE CIELO RASO</option>
+            <option>PAÑETE EXTERIOR ALLANADO</option>
+            <option>PAÑETE EXTERIOR IMPERMEABILIZADO</option>
+            <option>PAÑETE EXTERIOR RAYADO</option>
+            <option>PAÑETE INTERIOR ALLANADO</option>
+            <option>PAÑETE INTERIOR IMPERMEABILIZADO</option>
+            <option>PAÑETE PULIDO CON CAL</option>
+            <option>PAÑETE SOBRENIVEL</option>
+            <option>PEDESTALES 3000 PSI</option>
+            <option>PEDESTALES 3500 PSI</option>
+            <option>PINTURA CON BARNIZ</option>
+            <option>PINTURA CON ESMALTE</option>
+            <option>PINTURA EXTERIOR CORAZA</option>
+            <option>PINTUTRA DE VINILO TIPO 1</option>
+            <option>PISO ADOQUIN PEATONAL</option>
+            <option>PISO CERÁMICA</option>
+            <option>PISO DE GRANITO</option>
+            <option>PISO EN CONCRETO</option>
+            <option>PISO GRANITO FUNDIDO PULIDO</option>
+            <option>PISO GRANITO FUNDIDO SIN PULIR</option>
+            <option>PISO MOSAICO DE CEMENTO</option>
+            <option>PISO PORCELANATO</option>
+            <option>PISO TABLETA ARCILLA EXTERIOR</option>
+            <option>PISO TABLON EXTERIOR</option>
+            <option>PLACA DE CONTRAPISO</option>
+            <option>PLACA MACIZA 3000 PSI</option>
+            <option>PLANTILLA PISO CONCRETO</option>
+            <option>POYO COCINA</option>
+            <option>POYO DUCHA</option>
+            <option>RAMPA DE ACCESO</option>
+            <option>REDES AGUA POTABLE</option>
+            <option>REDES AGUAS NEGRAS</option>
+            <option>REDES DE AGUAS LLUVIAS</option>
+            <option>REDES DE VENTILACIÓN</option>
+            <option>RELLENO MATERIAL SELECCIONADO</option>
+            <option>RELLENO MATERIAL SELECCIONADO NATURAL</option>
+            <option>REPELENTE HUMEDAD</option>
+            <option>RESANE MURO ESTRUCTURAL</option>
+            <option>RETIRO MATERIAL SOBRANTE MANUAL</option>
+            <option>RETIRO MATERIAL SOBRANTE MECÁNICO</option>
+            <option>SILCOPLAST APLICADO</option>
+            <option>SOBRENIVEL LADRILLO DOBLE</option>
+            <option>SOBRENIVEL LADRILLO SENCILLO</option>
+            <option>SOLADOS EN CONCRETO</option>
+            <option>TECHO EN TEJA THERMOACUSTIC</option>
+            <option>TEJA BARRO NATURAL</option>
+            <option>TEJA FIBROCEMENTO</option>
+            <option>VIGA CANAL EN CONCRETO</option>
+            <option>VIGAS DE AMARR EN CONCRETO</option>
+            <option>VIGAS DE AMARRE 3000 PSI</option>
+            <option>VIGAS DE AMARRE 3500 PSI</option>
+            <option>VIGAS EN CONCRETO</option>
+            <option>VIGAS MADERA SAPÁN TECHO</option>
+            <option>ZAPATA AISLADA</option>
+            <option>ZAPATA CORRIDA</option>
+            <option>ZAPATAS EN CONCRETO 3000 PSI</option>
+            <option>ZAPATAS EN CONCRETO 3500 PSI</option>
+            <option>ZÓCALO BALDOSIN</option>
+            <option>ZÓCALO CERÁMICA</option>
+            <option>ZOCALO GRANITO COLOR FUN/PUL</option>
+            <option>ZOCALO GRANITO FUN/PUL</option>
+            <option>ZÓCALO PORCELANATO</option>
+          </select>
+        </div>
+        <div class="col-1">
+          <select name="unidad" [(ngModel)]="cotiza.unidad" class="form-control">
+            <option>mL</option>
+            <option>M2</option>
+            <option>M3</option>
+            <option>gL</option>
+            <option>kG</option>
+            <option>Und</option>
+          </select>
+        </div>
+        <div class="col-1">
+          <input name="cantidad" [(ngModel)]="cotiza.cantidad" type="text" class="form-control" placeholder="Cantidad">
+        </div>
+        <div class="col-2">
+          <input name="valor" [(ngModel)]="cotiza.valor" type="text" class="form-control" placeholder="Vr. Unitario">
+        </div>
+        <div class="col-2">
+          <button type="submit" style="position: absolute; top: 42.9%;" class="btn btn-success">Agregar</button>
+        </div>
+      </div>
+    </form>
+</div>
+ <hr>
+<div id="pdf" class="container">
+  <table class="table">
+    <thead>
+      <th>ITEM</th>
+      <th>TIPO</th>
+      <th>ACTIVIDAD</th>
+      <th>UNIDAD</th>
+      <th>CANTIDAD</th>
+      <th>VALOR UNITARIO</th>
+      <th>VALOR PARCIAL</th>
+
+    </thead>
+    <tbody>
+      <tr *ngFor="let cotiza of cotizar">
+        <td>{{cotiza.item}}</td>
+        <td>{{cotiza.tipo}}</td>
+        <td>{{cotiza.actividad}}</td>
+        <td>{{cotiza.cantidad}}</td>
+        <td>{{cotiza.unidad}}</td>
+        <td>{{cotiza.valor}}</td>
+        <td>{{cotiza.valorT}}</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <th>Valor Total</th>
+        <td>{{total}}</td>
+      </tr>
+
+    </tbody>
+
+  </table>
+</div>
+<button (click)="CrearPDF()" style="position: absolute; left:40%;"  class="btn btn-success">Generar PDF</button>
+

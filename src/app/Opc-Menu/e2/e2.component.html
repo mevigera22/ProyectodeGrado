@@ -1,0 +1,74 @@
+<p class="titulo">GASTOS CLIENTES</p>
+<div class="container">
+    <form (ngSubmit)="EnviarDatos()">
+      <div class="row">
+        <div class="col-1">
+          <input name="item" [(ngModel)]="cotiza.item" type="text" class="form-control" placeholder="Item">
+        </div>
+        <div class="col-2">
+          <input name="numero_factura" [(ngModel)]="cotiza.numero_Fac" type="text" class="form-control" placeholder="Numero de factura">
+        </div>
+        <div class="col-3">
+          <input name="descripcion" [(ngModel)]="cotiza.descripcion" type="text" class="form-control" placeholder="Descripcion">
+        </div>
+        <div class="col-1">
+          <select name="unidad" [(ngModel)]="cotiza.unidad" class="form-control">
+            <option>mL</option>
+            <option>M2</option>
+            <option>M3</option>
+            <option>gL</option>
+            <option>kG</option>
+            <option>Und</option>
+          </select>
+        </div>
+        <div class="col-1">
+          <input name="cantidad" [(ngModel)]="cotiza.cantidad" type="text" class="form-control" placeholder="Cantidad">
+        </div>
+        <div class="col-2">
+          <input name="valor" [(ngModel)]="cotiza.valor" type="text" class="form-control" placeholder="Vr. Unitario">
+        </div>
+
+        <div class="col-2">
+          <button type="submit" style="position: absolute; top: 42.9%;" class="btn btn-success">Agregar</button>
+        </div>
+      </div>
+    </form>
+</div>
+ <hr>
+<div id="pdf" class="container">
+  <table class="table">
+    <thead>
+      <th>ITEM</th>
+      <th>NÚMERO DE FACTURA</th>
+      <th>DESCRIPCIÓN</th>
+      <th>UNIDAD</th>
+      <th>CANTIDAD</th>
+      <th>VALOR UNITARIO</th>
+      <th>VALOR PARCIAL</th>
+
+    </thead>
+    <tbody>
+      <tr *ngFor="let cotiza of cotizar">
+        <td>{{cotiza.item}}</td>
+        <td>{{cotiza.numero_Fac}}</td>
+        <td>{{cotiza.descripcion}}</td>
+        <td>{{cotiza.cantidad}}</td>
+        <td>{{cotiza.unidad}}</td>
+        <td>{{cotiza.valor}}</td>
+        <td>{{cotiza.valorT}}</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <th>Valor Total</th>
+        <td>{{total}}</td>
+      </tr>
+
+    </tbody>
+
+  </table>
+</div>
+<button (click)="CrearPDF()" style="position: absolute; left:40%;"  class="btn btn-success">Generar PDF</button>

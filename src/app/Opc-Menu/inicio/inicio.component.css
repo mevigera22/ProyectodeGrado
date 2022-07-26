@@ -1,0 +1,79 @@
+.img{
+  width: 100%;
+  background-image: url("../../../assets/Img/curvas.svg");
+  -webkit-mask-image: url("../../../assets/Img/curvas.svg");
+  mask-image: url("../../../assets/Img/curvas.svg");
+  mask-size:cover;
+}
+.deco{
+  padding-bottom:56.25%;
+}
+.letras{
+  font-family: "Metropolis Thin";
+  color: white;
+  font-size: 240%;
+  position: absolute;
+  top: 30%;
+  left: 33%;
+}
+.letras1{
+  font-family: "Metropolis Thin";
+  color: #1AE3D9;
+  font-size: 150%;
+  position: absolute;
+  top:40%;
+  left: 37%;
+}
+.letras2{
+  font-family: "Metropolis Thin";
+  text-align: center;
+  color: white;
+  font-size: 100%;
+  position: absolute;
+  top: 48%;
+  left: 35%;
+}
+
+.Contacto{
+  width: 10%;
+  height: 5%;
+  border-radius: 22px ;
+  background-color: #00c1c5;
+	border-color: #00b4b8;
+	color:#FFFFFF;
+  position: absolute;
+  top: 58%;
+  left: 44%;
+}
+.circulo{
+  width: 11%;
+	height: 7%;
+  border: 1.9px solid white;
+	border-radius: 22px;
+
+	display: flex;
+  position: absolute;
+  top: 57%;
+  left: 43.5%;
+}
+
+.img1{
+  width: 9%;
+  margin-left: 10%;
+  margin-top: -19%;
+}
+.img2{
+  width: 9%;
+  margin-left: 20%;
+  margin-top: -6%;
+}
+.img3{
+  width: 9%;
+  margin-left: 17%;
+  margin-top: -12%;
+}
+.img4{
+  width: 9%;
+  margin-left: 10%;
+  margin-top: -3%;
+}
